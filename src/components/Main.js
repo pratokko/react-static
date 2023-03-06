@@ -1,19 +1,18 @@
 import React from "react";
 
 
-function Main() {
+function Main(props) {
   return (
-    <main className="main-content">
-      <h1 className="main--heading">Fun Facts About React</h1>
-      <ul className="main--list">
-        <li>Was first released in 2013</li>
-        <li>Was originally created by jordan Walke</li>
-        <li> Has well over 100k stars on GitHub</li>
-        <li> Is maintained by FaceBook</li>
-        <li> Poweres thousands of enterprice apps including mobile apps</li>
-      </ul>
-     
-    </main>
+    <main className={props.darkMode ? "dark" : ""}>
+            <h1 className="main--title">Fun facts about React</h1>
+            <ul className="main--facts">
+                <li>Was first released in 2013</li>
+                <li>Was originally created by Jordan Walke</li>
+                <li>Has well over 100K stars on GitHub</li>
+                <li>Is maintained by Facebook</li>
+                <li>Powers thousands of enterprise apps, including mobile apps</li>
+            </ul>
+        </main>
   );
 }
 
